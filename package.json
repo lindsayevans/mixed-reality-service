@@ -1,0 +1,39 @@
+{
+    "name": "mixed-reality-service",
+    "version": "0.0.1",
+    "description": "ES6/TypeScript library implementation of the Mixed Reality Service (MRS)",
+    "main": "lib/index.js",
+    "author": "Lindsay Evans <linz@linz.id.au>",
+    "license": "MIT",
+    "scripts": {
+        "build": "tsc",
+        "test": "jest --no-cache --coverage --coverageDirectory ./test-coverage/",
+        "watch": "run-p watch:*",
+        "watch:ts": "tsc -w",
+        "watch:test": "jest --watch --notify"
+    },
+    "dependencies": {
+        "bitcore-lib": "^0.14.0",
+        "bitcore-mnemonic": "^1.2.3",
+        "npm-run-all": "^4.0.2",
+        "openchain": "^0.2.4"
+    },
+    "devDependencies": {
+        "@types/jest": "^19.2.2",
+        "@types/node": "^7.0.12",
+        "jest": "^19.0.2",
+        "ts-jest": "^19.0.8",
+        "typescript": "^2.2.2"
+    },
+    "jest": {
+        "transform": {
+            ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+        },
+        "testRegex": "(src/.*\\.(test|spec))\\.ts$",
+        "moduleFileExtensions": [
+            "ts",
+            "js"
+        ],
+        "testResultsProcessor": "<rootDir>/node_modules/ts-jest/coverageprocessor.js"
+    }
+}
