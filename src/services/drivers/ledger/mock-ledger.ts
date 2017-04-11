@@ -37,7 +37,12 @@ export default class MockLedgerDriver extends LedgerDriver {
      */
     public async delete(request: DeleteRequest): Promise<DeleteResponse | Exception> {
 
+        if (request.Latitude === undefined) {
+            throw 'Invalid DeleteRequest';
+        }
+
         let response = await new DeleteResponse();
+        response.Removed = request.VerificationToken !== undefined;
         return response;
 
     }
@@ -46,6 +51,10 @@ export default class MockLedgerDriver extends LedgerDriver {
      * Searches for an MRS record in the ledger
      */
     public async search(request: SearchRequest): Promise<SearchResponse | Exception> {
+
+        if (request.Latitude === undefined) {
+            throw 'Invalid SearchRequest';
+        }
 
         let response = await new SearchResponse();
         return response;

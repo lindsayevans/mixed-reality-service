@@ -13,14 +13,14 @@ in the discovery request and the MRRS data set. It is an integer value, set to z
 if there are no matches, a positive integer if matches have been found, or -1 if an
 error has occurred.
      */
-    NumberMatches: number;
+    NumberMatches: number = 0;
 
     /**
      * List of matches is defined as an array of data representing the specific information
 about each match found during the MRS ‘search’ request. If Number of Matches is zero
 or negative, List of Matches should be omitted from the response.
      */
-    Matching: Array<Record> = [];
+    Matching: Array<Record>;
 
     /**
      * Converts this MRS Response into a JSON object

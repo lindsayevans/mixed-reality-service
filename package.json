@@ -7,7 +7,7 @@
     "license": "MIT",
     "scripts": {
         "build": "tsc",
-        "test": "jest --no-cache --coverage --coverageDirectory ./test-coverage/",
+        "test": "jest --coverage --coverageDirectory ./test-coverage/",
         "watch": "run-p watch:*",
         "watch:ts": "tsc -w",
         "watch:test": "jest --watch --notify"
