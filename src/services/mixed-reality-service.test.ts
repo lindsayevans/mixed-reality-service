@@ -40,7 +40,7 @@ beforeAll(() => {
 
 describe('An MRS `add` operation should...', () => {
 
-  test('suceed when given a valid add request', () => {
+  test('succeed when given a valid add request', () => {
 
     // Test expectation
     return mrs.add(addReq)
@@ -83,7 +83,7 @@ describe('An MRS `add` operation should...', () => {
 
 describe('An MRS `delete` operation should...', () => {
 
-  test('suceed when given a valid delete request', () => {
+  test('succeed when given a valid delete request', () => {
 
     // Test expectation
     return mrs.delete(deleteReq)
